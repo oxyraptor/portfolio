@@ -24,7 +24,6 @@ body {
             align-items: center;
             z-index: 9999;
             flex-direction: column;
-            animation-delay: 10000ms;
         }
 
         /* Animation for the spinner */
@@ -53,7 +52,6 @@ body {
 
         /* Hide the loader after the page is fully loaded */
         body.loaded #loader {
-            animation-delay: 10000ms;
             display: none;
         }
 
