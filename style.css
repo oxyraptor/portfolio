@@ -140,10 +140,6 @@ body p {
     justify-content: center;
     align-items: center;
 }
-.c-body .abt :hover{
-    transform: scale(1.005);
-
-}
 
 .c-body .abt p {
     margin: 2px;
