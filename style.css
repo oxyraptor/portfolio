@@ -11,6 +11,23 @@ body {
     background-attachment: scroll !important;
     cursor: crosshair;
 }
+body p {
+    transform: translateY(100%); /* Start off-screen on the left */
+    opacity: 0.1; /* Initially invisible */
+    animation: slideIn 1.2s forwards; /* Apply slide-in animation */
+}
+
+/* Define the slide-in animation */
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%); /* Start off-screen */
+        opacity: .5; /* Start invisible */
+    }
+    100% {
+        transform: translateY(0); /* Move to original position */
+        opacity: 1; /* Become fully visible */
+    }
+}
 
 #loader {
             position: fixed;
@@ -24,6 +41,7 @@ body {
             align-items: center;
             z-index: 9999;
             flex-direction: column;
+            animation-delay: 10000ms;
         }
 
         /* Animation for the spinner */
@@ -52,6 +70,7 @@ body {
 
         /* Hide the loader after the page is fully loaded */
         body.loaded #loader {
+            animation-delay: 10000ms;
             display: none;
         }
 
@@ -91,17 +110,6 @@ body {
     color: rgb(164, 164, 164) !important;
 }
 
-.logo {
-    align-items: center;
-}
-
-.logo img {
-    margin: 5px;
-    padding: 0;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-}
 
 .img img {
     height: 200px !important;
@@ -110,7 +118,10 @@ body {
     transition: transform 0.3s ease-in-out;
     animation: expandContract 5s;
 }
+.img img:hover{
+    transform: scale(1.5);
 
+}
 @keyframes expandContract {
 
     0%,
@@ -128,6 +139,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.c-body .abt :hover{
+    transform: scale(1.005);
+
 }
 
 .c-body .abt p {
@@ -149,9 +164,9 @@ body {
     position: fixed;
     top: -100%;
     width: 300%;
-    filter: blur(0.5px);
+    filter: blur(0.7px);
     z-index: -1;
-    animation: grain 6s steps(5) infinite;
+    animation: grain 6s steps(15) infinite;
 }
 
 @keyframes grain {
@@ -232,7 +247,7 @@ body {
 }
 
 .list .list-group-item {
-    background-color: #222222 !important;
+    background-color: #22222200 !important;
     align-items: center !important;
     justify-content: center !important;
 }
