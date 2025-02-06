@@ -242,14 +242,14 @@ body p {
   }
   @media screen and (min-width: 801px) {
     .passion {
-      font-size: 80px;
+      font-size: 100px;
     }
   }
 
 .list {
     display: flex;
     align-self: right;
-    margin-top: 15%;
+    /* margin-top: 15%; */
     margin-bottom: 2%;
     width: 40%;
 
